@@ -1,7 +1,14 @@
 import { router } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { Dimensions, Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+  Dimensions,
+  Image,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 
 const { width: screenWidth } = Dimensions.get("window");
 
@@ -29,13 +36,13 @@ export default function Index() {
       </View>
       <View style={styles.buttonWrapper}>
         <TouchableOpacity
-          onPress={() => router.navigate("/login")}
+          onPress={() => router.navigate("./login")}
           style={[styles.button, styles.loginButton]}
         >
           <Text style={styles.loginText}>Log in</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => router.navigate("/signup")}
+          onPress={() => router.navigate("./signup")}
           style={[styles.button, styles.signupButton]}
         >
           <Text style={styles.signupText}>Sign up</Text>
